@@ -6,6 +6,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {
@@ -23,7 +24,7 @@ export default {
             borderColor: "transparent"
           },
           "100%": {
-            borderColor: "white"
+            borderColor: "black"
           }
         }
       },
