@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { Tooltip } from "react-tooltip";
 import { FaArrowDownLong } from "react-icons/fa6";
+import { useRef } from 'react';
 
 const HomeCard = () => {
   const socialMedia = [
@@ -12,6 +13,14 @@ const HomeCard = () => {
     { name: "Gmail", url: "", icon: <BiLogoGmail /> },
     { name: "Twitter", url: "", icon: <FaTwitter /> },
   ];
+
+  // Create a ref for the element you want to scroll to
+  const latestWorksRef = useRef(null);
+
+  const scrollToLatestWorks = () => {
+    // Scroll to the latest works section
+    latestWorksRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="flex flex-col">
@@ -41,9 +50,10 @@ const HomeCard = () => {
           ))}
         </ul>
       </div>
-      <div className='flex flex-col items-center justify-center mt-16'>
-        <button className='btn btn-sm dark:btn-outline'>Latest Works</button>
-        <FaArrowDownLong className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 mt-3" />
+      {/* Add ref to the element you want to scroll to */}
+      <div ref={latestWorksRef} className='flex flex-col items-center justify-center mt-10'>
+        <button className='btn btn-sm dark:btn-outline' onClick={scrollToLatestWorks}>Latest Works</button>
+        <FaArrowDownLong className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 mt-3" onClick={scrollToLatestWorks} />
       </div>
     </div>
   );

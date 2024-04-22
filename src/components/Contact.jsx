@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section dark:bg-slate-800 bg-gray-200 w-full">
       <h2>Let&lsquo;s connect</h2>
       <div className="contact-form">
         <div className="contact-img">

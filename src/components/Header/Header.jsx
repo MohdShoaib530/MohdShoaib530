@@ -106,7 +106,7 @@ function Header() {
             <FiMenu
               onClick={changeWidth}
               size={"32px"}
-              className=" font-bold text-white m-4 lg:hidden"
+              className=" font-bold text-black dark:text-white m-4 lg:hidden"
             />
           </label>
         </div>
