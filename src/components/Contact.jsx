@@ -1,6 +1,20 @@
 import gmailGif from "../Assets/Email.gif";
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error) => alert(error));
+  };
   return (
     <>
       <div className="text-center mb-14">
@@ -15,7 +29,7 @@ const Contact = () => {
             <img src={gmailGif} alt="Email" />
           </div>
           <div className="contact-form flex flex-col justify-center items-center border border-gray-500 p-7 rounded-xl w-fit lg:w-5/12">
-            <form className="contact flex flex-col gap-5 w-full" name="contact">
+            <form data-netlify="true" onSubmit={handleSubmit} className="contact flex flex-col gap-5 w-full" name="contact">
               <div className="flex flex-row gap-1">
                 <label className="input input-bordered flex items-center gap-2 w-full">
                   <svg
