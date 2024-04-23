@@ -1,3 +1,5 @@
+import gmailGif from "../Assets/Email.gif";
+
 const Contact = () => {
   return (
     <>
@@ -10,7 +12,7 @@ const Contact = () => {
       </div>
       <section className="contact-section dark:bg-slate-800 bg-gray-200 w-full flex flex-col lg:flex-row items-center justify-evenly">
           <div className="hidden lg:flex">
-            <img src="./src/Assets/Email.gif" alt="Email" />
+            <img src={gmailGif} alt="Email" />
           </div>
           <div className="contact-form flex flex-col justify-center items-center border border-gray-500 p-7 rounded-xl w-fit lg:w-5/12">
             <form className="contact flex flex-col gap-5 w-full" name="contact">

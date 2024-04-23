@@ -1,16 +1,19 @@
+import lms from '../Assets/Screenshot 2024-04-22 193719.png';
+import blog from '../Assets/Screenshot 2024-04-22 193808.png';
+
 const ProjectCard = () => {
   const projects = [
     {
       title: "Learnign Management System",
       description: "This is a learning management system project. It is a full stack project built with React, Node.js, Express, and MongoDB. It has features like user authentication, course creation, and enrollment.",
-      imageUrl: "src/Assets/Screenshot 2024-04-22 193719.png",
+      imageUrl: lms,
       live: "https://codemon11.netlify.app/",
       githubUrl: "https://www.github.com",
     },
     {
       title: "Appwrite-React-Blog",
       description: "This is a blog project built with React and Appwrite. It has features like user authentication, blog creation,blog edit,blog delete. It is a full stack project built with React, Appwrite, and Tailwind CSS.",
-      imageUrl: "src/Assets/Screenshot 2024-04-22 193808.png",
+      imageUrl: blog,
       live: "https://appwrite-react-blog.netlify.app/",
       githubUrl: "https://www.github.com",
     },
