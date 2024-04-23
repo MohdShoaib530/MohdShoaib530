@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter} from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { Tooltip } from "react-tooltip";
 import { FaArrowDownLong } from "react-icons/fa6";
@@ -7,11 +6,11 @@ import { useRef } from 'react';
 
 const HomeCard = () => {
   const socialMedia = [
-    { name: "LinkedIn", url: "", icon: <FaLinkedin /> },
-    { name: "GitHub", url: "", icon: <FaGithub /> },
-    { name: "Instagram", url: "", icon: <FaInstagram /> },
-    { name: "Gmail", url: "", icon: <BiLogoGmail /> },
-    { name: "Twitter", url: "", icon: <FaTwitter /> },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/mohd-shoaib530/", icon: <FaLinkedin /> },
+    { name: "GitHub", url: "https://github.com/MohdShoaib530", icon: <FaGithub /> },
+    { name: "Instagram", url: "https://www.instagram.com/mohd.shoaib_123/", icon: <FaInstagram /> },
+    { name: "Gmail", url: "mailto:mohdshoaib91530@gmail.com", icon: <BiLogoGmail /> },
+    { name: "Twitter", url: "https://twitter.com/MohdShoaib530", icon: <FaTwitter /> },
   ];
 
   // Create a ref for the element you want to scroll to
@@ -36,15 +35,17 @@ const HomeCard = () => {
         <ul className="hidden lg:flex flex-col gap-y-7 pr-5 ">
           {socialMedia.map((social, index) => (
             <li key={index}>
-              <Link
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-tooltip-id="my-tooltip"
                 data-tooltip-content={social.name}
                 data-tooltip-place="left"
-                to={social.url}
                 className="text-3xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110"
               >
                 {social.icon}
-              </Link>
+              </a>
               <Tooltip id="my-tooltip" />
             </li>
           ))}

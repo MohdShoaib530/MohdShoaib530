@@ -22,7 +22,7 @@ const ProjectCard = () => {
     <div className="flex flex-col lg:flex-row gap-10 lg:gap-1 justify-evenly items-center mb-8 mt-10 w-full lg:w-fit dark:bg-slate-800 bg-gray-200 ">
       {
         projects.map((project, index) => (
-          <a href={project.live} target="_blank" rel="noopener noreferrer" key={index} className=" w-10/12 lg:w-4/12 shadow-xl hover:shadow-lg transition duration-300 transform hover:scale-105 rounded-3xl p-2">
+          <div href={project.live} target="_blank" rel="noopener noreferrer" key={index} className=" w-10/12 lg:w-4/12 shadow-xl hover:shadow-lg transition duration-300 transform hover:scale-105 rounded-3xl p-2">
             <img src={project.imageUrl} alt={project.title} className="rounded-lg " />
             <h1 className="text-xl lg:text-2xl font-semibold mt-4 text-wrap text-gray-200">{project.title}</h1>
             <p className="dark:text-gray-400 text-gray-950 lg:text-xl">{project.description}</p>
@@ -34,7 +34,7 @@ const ProjectCard = () => {
               Github
             </a>
           </div>
-          </a>
+          </div>
         ))
       }
     </div>
