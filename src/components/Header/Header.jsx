@@ -89,7 +89,7 @@ function Header() {
           <li key={button.id} className="nav-item ">
             <button
               onClick={() => navigate(button.link)}
-              className="btn btn-sm btn-outline text-gray-50 bg-gray-900 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 hover:bg-gray-200 hover:text-gray-900 font-medium"
+              className='btn btn-sm dark:btn-outline btn-outline bg-gray-700'
             >
               {button.text}
             </button>

@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 const Home = () => {
   
   return (
-    <div className='dark:bg-slate-800 bg-gray-200'>
+    <div className='dark:bg-slate-800 bg-gray-200 w-full'>
       <HomeCard/>
       <ProjectsCard/>
       <Contact/>

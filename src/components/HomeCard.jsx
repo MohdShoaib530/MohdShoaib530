@@ -26,10 +26,10 @@ const HomeCard = () => {
     <div className="flex flex-col">
       <div className='flex flex-col items-center justify-center lg:justify-between lg:flex-row w-full mt-10 mb-10'>
         <div className="flex flex-col justify-center items-center w-fit lg:w-7/12">
-          <h1 className="lg:text-4xl sm:2xl md:text-3xl text-gray-950 dark:text-gray-300 font-semibold">
+          <h1 className="lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-semibold">
             Hi There! <br /> I&apos;M Mohammad Shoaib
           </h1>
-          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-2 lg:text-5xl sm:3xl md:text-4xl text-gray-950 dark:text-gray-300 font-bold ease-linear">
+          <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-bold ease-linear">
             MERN Stack Developer
           </h1>
         </div>
@@ -52,7 +52,7 @@ const HomeCard = () => {
       </div>
       {/* Add ref to the element you want to scroll to */}
       <div ref={latestWorksRef} className='flex flex-col items-center justify-center mt-10'>
-        <button className='btn btn-sm dark:btn-outline' onClick={scrollToLatestWorks}>Latest Works</button>
+        <button className='btn btn-sm dark:btn-outline btn-outline bg-gray-800' onClick={scrollToLatestWorks}>Latest Works</button>
         <FaArrowDownLong className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 mt-3" onClick={scrollToLatestWorks} />
       </div>
     </div>

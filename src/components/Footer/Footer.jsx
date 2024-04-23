@@ -6,8 +6,12 @@ import {
   BsGithub,
 } from "react-icons/bs";
 import { BiLogoGmail } from "react-icons/bi";
+import { Tooltip } from 'react-tooltip';
 
 function Footer() {
+  const scrollPageUp = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   return (
@@ -21,17 +25,19 @@ function Footer() {
                 ❤️
                 </span>{" "}
                 by{" "}
-                <a
-                href="https://www.frontendmentor.io/challenges"
-                target="_blank"
-                rel="noreferrer"
-                className="text-primary"
+                <button 
+                onClick={() => scrollPageUp()}
+                className='text-blue-500'
+                data-tooltip-id="on-top-tooltip"
+                data-tooltip-content='On-Top'
+                data-tooltip-place="top"
                 >
-                Mohd Shoaib
-                </a>
+                  Mohd Shoaib
+                </button>
+                <Tooltip id="on-top-tooltip" />
             </p>
         </div>
-        <nav className="md:place-self-center md:justify-self-end">
+        <nav className="md:place-self-center md:justify-self-end mb-2">
           <div className="grid grid-flow-col gap-5 text-2xl">
             <a href="">
               <BsInstagram />
