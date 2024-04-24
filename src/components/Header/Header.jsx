@@ -3,20 +3,45 @@ import { FiMenu } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import useTheme from "../../context/theme.js";
 import { Tooltip } from "react-tooltip";
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import { SiUpwork } from "react-icons/si";
 
 function Header() {
-
   const navigate = useNavigate();
   const { themeMode, lightTheme, darkTheme } = useTheme();
 
   const socialMedia = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/mohd-shoaib530/", icon: <FaLinkedin /> },
-    { name: "GitHub", url: "https://github.com/MohdShoaib530", icon: <FaGithub /> },
-    { name: "Instagram", url: "https://www.instagram.com/mohd.shoaib_123/", icon: <FaInstagram /> },
-    { name: "Gmail", url: "mailto:mohdshoaib91530@gmail.com", icon: <BiLogoGmail /> },
-    { name: "Twitter", url: "https://twitter.com/MohdShoaib530", icon: <FaTwitter /> },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/mohd-shoaib530/",
+      icon: <FaLinkedin />,
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/MohdShoaib530",
+      icon: <FaGithub />,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/mohd.shoaib_123/",
+      icon: <FaInstagram />,
+    },
+    {
+      name: "Gmail",
+      url: "mailto:mohdshoaib91530@gmail.com",
+      icon: <BiLogoGmail />,
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/MohdShoaib530",
+      icon: <FaTwitter />,
+    },
+    {
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/~0102a4f512110275d7",
+      icon: <SiUpwork />,
+    },
   ];
 
   const onChangeBtn = (e) => {
@@ -58,7 +83,7 @@ function Header() {
       <div className="text-3xl text-gray-950 font-semibold dark:text-gray-300 absolute z-50 lg:left-5 hidden lg:flex">
         MS.
       </div>
-      <div className='absolute right-5 lg:right-1/4'>
+      <div className="absolute right-5 lg:right-1/4">
         <label
           className="swap swap-rotate"
           data-tooltip-id="dark mode"
@@ -102,7 +127,7 @@ function Header() {
           <li key={button.id} className="nav-item ">
             <button
               onClick={() => navigate(button.link)}
-              className='btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 '
+              className="btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
             >
               {button.text}
             </button>
@@ -135,26 +160,24 @@ function Header() {
                 <AiFillCloseCircle size={24} />
               </button>
             </li>
-            <li  className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
-              <Link to="/">Home</Link>
-            </li >
-            <li  className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
-              <Link to="/about-me">About Me</Link>
+            <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
+              <Link to="/" onClick={hideDrawer}>Home</Link>
             </li>
-            {
-              socialMedia.map((social, index) => (
-                <li key={index}>
-                  <a
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110"
-                  >
-                    {social.icon} {social.name}
-                  </a>
-                </li>
-              ))
-            }
+            <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
+              <Link to="/about-me" onClick={hideDrawer}>About Me</Link>
+            </li>
+            {socialMedia.map((social, index) => (
+              <li key={index}>
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110"
+                >
+                  {social.icon} {social.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { Tooltip } from "react-tooltip";
 import { FaArrowDownLong } from "react-icons/fa6";
 import { useRef } from "react";
+import { SiUpwork } from 'react-icons/si';
 
 const HomeCard = () => {
   const socialMedia = [
@@ -31,6 +32,11 @@ const HomeCard = () => {
       url: "https://twitter.com/MohdShoaib530",
       icon: <FaTwitter />,
     },
+    {
+      name: "Upwork",
+      url: "https://www.upwork.com/freelancers/~0102a4f512110275d7",
+      icon: <SiUpwork />,
+    },
   ];
 
   // Create a ref for the element you want to scroll to
@@ -43,7 +49,7 @@ const HomeCard = () => {
 
   return (
     <div className="flex flex-col relative">
-      <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row w-full mt-10 mb-10">
+      <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row w-full mt-10 ">
         <div className="flex flex-col justify-center items-center w-fit lg:w-7/12">
           <h1 className="lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-semibold">
             Hi There! <br /> I&apos;M Mohammad Shoaib
@@ -74,7 +80,7 @@ const HomeCard = () => {
       {/* Add ref to the element you want to scroll to */}
       <div
         ref={latestWorksRef}
-        className="flex flex-col items-center justify-center mt-10"
+        className="flex flex-col items-center justify-center pt-10 pb-5"
       >
         <button
           className="submit-btn btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
@@ -83,7 +89,7 @@ const HomeCard = () => {
           Latest Works
         </button>
         <FaArrowDownLong
-          className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 mt-3"
+          className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 pt-3 "
           onClick={scrollToLatestWorks}
         />
       </div>

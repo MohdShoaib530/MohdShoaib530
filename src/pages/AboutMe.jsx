@@ -108,7 +108,7 @@ const AboutMe = () => {
   };
   return (
     <>
-      <div className="about-me-container dark:bg-slate-800 bg-gray-200 w-full flex flex-col items-center lg:items-start pt-16 lg:flex-row justify-between px-10 py-5 text-gray-950 dark:text-gray-100">
+      <div className="about-me-container dark:bg-slate-800 bg-gray-200 w-full flex flex-col items-center lg:items-start pt-16 lg:flex-row justify-between lg:px-10 px-2 py-5 text-gray-950 dark:text-gray-100">
         <div className="about-me-content flex flex-col items-center  gap-3 w-11/12 lg:w-6/12 ">
           <button className="btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 w-fit">
             About Me
@@ -129,7 +129,7 @@ const AboutMe = () => {
             opportunities.
           </h1>
         </div>
-        <div className='flex flex-col items-center justify-center gap-3 w-11/12 lg:w-6/12'>
+        <div className='flex flex-col items-center justify-center gap-3 w-11/12 lg:w-6/12 pt-5 lg:pt-0 '>
           {Object.keys(personalSkillset).map((key) => (
             <div
               key={key}

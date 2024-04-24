@@ -9,7 +9,7 @@ const ProjectCard = () => {
         "This is a learning management system project. It is a full stack project built with React, Node.js, Express, and MongoDB. It has features like user authentication, course creation, and enrollment.",
       imageUrl: lms,
       live: "https://codemon11.netlify.app/",
-      githubUrl: "https://www.github.com",
+      githubUrl: "https://github.com/MohdShoaib530/lms-client",
     },
     {
       title: "Appwrite-React-Blog",
@@ -17,18 +17,18 @@ const ProjectCard = () => {
         "This is a blog project built with React and Appwrite. It has features like user authentication, blog creation,blog edit,blog delete. It is a full stack project built with React, Appwrite, and Tailwind CSS.",
       imageUrl: blog,
       live: "https://appwrite-react-blog.netlify.app/",
-      githubUrl: "https://www.github.com",
+      githubUrl: "https://github.com/MohdShoaib530/appwrite-react-blog",
     },
   ];
   return (
-    <div className="flex flex-col lg:flex-row gap-10 lg:gap-1 justify-evenly items-center   w-full dark:bg-slate-800 bg-gray-200 ">
+    <div className="flex flex-col lg:flex-row gap-10 lg:gap-1 justify-evenly items-center  w-full dark:bg-slate-800 bg-gray-200 ">
       {projects.map((project, index) => (
         <div
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
           key={index}
-          className=" w-10/12 lg:w-4/12 shadow-xl hover:shadow-lg transition duration-300 transform hover:scale-105 rounded-3xl p-2"
+          className=" w-11/12 lg:w-4/12 shadow-xl hover:shadow-lg transition duration-300 transform hover:scale-105 rounded-3xl p-2"
         >
           <img
             src={project.imageUrl}
