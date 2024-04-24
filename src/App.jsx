@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import { Outlet } from 'react-router-dom'
 import { ThemeProvider } from './context/theme.js'
 import { useEffect, useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [themeMode, setThemeMode] = useState("dark")
@@ -26,6 +27,7 @@ function App() {
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
       <div className='dark:bg-slate-800 bg-gray-200 w-full h-screen px-3'>
+        <Toaster/>
         <Header/>
         <Outlet/>
         <Footer/>

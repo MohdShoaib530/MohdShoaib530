@@ -2,6 +2,8 @@
 import gmailGif from "../Assets/Email.gif";
 import emailjs from "@emailjs/browser"
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+
 
 const Contact = () => {
   const scrollPageUp = () => {
@@ -23,7 +25,32 @@ const Contact = () => {
   };
   
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent form submission if there are errors
+  
+    function isEmail(string){
+      return string.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)
+    }
+    // Form validation checks
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("All fields are required");
+      return; // Exit the function to prevent form submission
+    }
+  
+    if (formData.name.length < 3) {
+      toast.error(`Name must be at least 3 characters`);
+      return; // Exit the function to prevent form submission
+    }
+  
+    if(!isEmail(formData.email)) {
+      return toast.error(`Please enter a valid email`);
+      
+  }
+    if (formData.message.length < 10) {
+      toast.error(`Message should be at least 20 characters`);
+      return; // Exit the function to prevent form submission
+    }
+  
+    // If all validations pass, proceed with sending the email
     try {
       const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -33,28 +60,27 @@ const Contact = () => {
           publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         }
       );
-
+  
       console.log(result.text);
-      if(result){
-        alert('Message sent successfully');
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-        scrollPageUp();
-      }
-    } catch (error) {
-      console.error(error);
-      alert(error.message || "Message not sent")
+      toast.success("Message sent successfully");
       setFormData({
         name: '',
         email: '',
         message: '',
       });
-      scrollPageUp()
+      scrollPageUp();
+    } catch (error) {
+      console.error(error);
+      toast.error(error.message || "Message not sent");
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+      scrollPageUp();
     }
   };
+  
   return (
     <>
       <div className="text-center mb-14">
@@ -120,7 +146,6 @@ const Contact = () => {
                 className="textarea textarea-bordered h-20 w-full"
                 placeholder="Message"
                 onChange={handleChange}
-                minLength={10}
                 name='message'
                 id='message'
               ></textarea>
