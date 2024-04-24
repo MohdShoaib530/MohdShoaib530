@@ -89,7 +89,7 @@ function Header() {
 
           {/* moon icon */}
           <svg
-            className="swap-on fill-current w-10 h-10"
+            className="swap-on fill-gray-300 w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -102,7 +102,7 @@ function Header() {
           <li key={button.id} className="nav-item ">
             <button
               onClick={() => navigate(button.link)}
-              className='btn btn-sm dark:btn-outline btn-outline bg-gray-700'
+              className='btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 '
             >
               {button.text}
             </button>
@@ -129,8 +129,8 @@ function Header() {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu min-h-full p-4 w-48 sm:w-80 bg-base-200 text-base-content">
-            <li className="w-fit text-white  z-50">
+          <ul className="menu min-h-full p-4 w-48 sm:w-80 bg-base-200 dark:bg-gray-900 text-base-content">
+            <li className="w-fit text-black dark:text-gray-50   z-50">
               <button onClick={hideDrawer}>
                 <AiFillCloseCircle size={24} />
               </button>

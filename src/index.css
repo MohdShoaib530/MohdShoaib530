@@ -5,4 +5,14 @@
 body {
   width: 100%;
   height: 100vh;
+  background-color: #ffffff; /* Light mode background color */
+  color: #000000; /* Light mode text color */
+}
+
+/* Dark mode styles using prefers-color-scheme media query */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+  }
 }

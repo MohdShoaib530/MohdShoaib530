@@ -84,7 +84,7 @@ const Contact = () => {
   return (
     <>
       <div className="text-center mb-14">
-        <button className="text-center text-2xl  btn btn-sm dark:btn-outline btn-outline bg-gray-700">
+        <button className="text-center text-2xl  btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 ">
           Let&lsquo;s connect
         </button>
       </div>
@@ -151,7 +151,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <button
-              className="submit-btn btn-sm btn dark:btn-outline btn-outline bg-gray-700"
+              className="submit-btn btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
               type="submit"
             >
               Send Message

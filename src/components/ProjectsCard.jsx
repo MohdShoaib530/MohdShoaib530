@@ -27,10 +27,10 @@ const ProjectCard = () => {
             <h1 className="text-xl lg:text-2xl font-semibold mt-4 text-wrap text-gray-200">{project.title}</h1>
             <p className="dark:text-gray-400 text-gray-950 lg:text-xl">{project.description}</p>
             <div className="flex flex-row justify-between mt-2 mb-2">
-            <a href={project.live} className="btn btn-sm dark:btn-outline btn-outline bg-gray-800" target="_blank" rel="noopener noreferrer">
+            <a href={project.live} className="btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 " target="_blank" rel="noopener noreferrer">
               Demo
             </a>
-            <a href={project.githubUrl} className='btn btn-sm dark:btn-outline btn-outline bg-gray-800'target="_blank" rel="noopener noreferrer">
+            <a href={project.githubUrl} className='btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110  'target="_blank" rel="noopener noreferrer">
               Github
             </a>
           </div>
