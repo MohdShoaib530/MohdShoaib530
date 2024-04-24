@@ -42,7 +42,7 @@ const HomeCard = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row w-full mt-10 mb-10">
         <div className="flex flex-col justify-center items-center w-fit lg:w-7/12">
           <h1 className="lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-semibold">

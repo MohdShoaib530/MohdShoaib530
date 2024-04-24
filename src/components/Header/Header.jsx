@@ -54,8 +54,8 @@ function Header() {
     drawerSide[0].style.width = "0";
   }
   return (
-    <nav className="navbar flex flex-row justify-between px-6">
-      <div className="text-3xl text-gray-950 font-semibold dark:text-gray-300 absolute right-3 lg:left-5 hidden lg:flex">
+    <nav className="navbar flex flex-row justify-between px-6 relative">
+      <div className="text-3xl text-gray-950 font-semibold dark:text-gray-300 absolute z-50 lg:left-5 hidden lg:flex">
         MS.
       </div>
       <div className='absolute right-5 lg:right-1/4'>
@@ -129,7 +129,7 @@ function Header() {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu min-h-full p-4 w-48 sm:w-80  text-base-content">
+          <ul className="menu min-h-full p-4 w-48 sm:w-80  text-base-content dark:bg-slate-800 bg-gray-200">
             <li className="w-fit text-black dark:text-gray-50   z-50">
               <button onClick={hideDrawer}>
                 <AiFillCloseCircle size={24} />
