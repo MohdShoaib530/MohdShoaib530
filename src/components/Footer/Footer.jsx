@@ -17,8 +17,8 @@ function Footer() {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   return (
-    <>
-      <footer className="footer px-10 py-4 dark:bg-slate-800 bg-gray-200 text-base-content flex flex-col lg:flex-row justify-between items-center pt-10">
+    <div className='dark:bg-slate-800 bg-gray-200'>
+      <footer className="footer px-10 py-4  text-base-content flex flex-col lg:flex-row justify-between items-center pt-10">
         
         <div>
             <p className="text-center text-gray-950 dark:text-gray-200">
@@ -60,7 +60,7 @@ function Footer() {
           </div>
         </nav>
       </footer>
-    </>
+    </div>
   );
 }
 

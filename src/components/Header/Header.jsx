@@ -129,7 +129,7 @@ function Header() {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu min-h-full p-4 w-48 sm:w-80 bg-base-200 dark:bg-gray-900 text-base-content">
+          <ul className="menu min-h-full p-4 w-48 sm:w-80  text-base-content">
             <li className="w-fit text-black dark:text-gray-50   z-50">
               <button onClick={hideDrawer}>
                 <AiFillCloseCircle size={24} />

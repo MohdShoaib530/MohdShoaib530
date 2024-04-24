@@ -26,7 +26,7 @@ function App() {
 
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
-      <div className='dark:bg-slate-800 bg-gray-200 w-full h-screen px-3'>
+      <div className='dark:bg-slate-800 bg-gray-200 w-full h-screen'>
         <Toaster/>
         <Header/>
         <Outlet/>
