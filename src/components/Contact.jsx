@@ -24,32 +24,24 @@ const Contact = () => {
       );
 
       console.log(result.text);
-      alert('Message sent successfully');
-      reset(); // Reset the form after successful submission
-      scrollPageUp();
+      if(result){
+        alert('Message sent successfully');
+        scrollPageUp();
+        reset(); // Reset the form after successful submission
+      }
     } catch (error) {
-      console.error(error.text);
-      setError('Message not sent');
-      alert(errors)
+      console.error(error);
+      setError(error.message || "Message not sent");
+      alert(errors.message || "Message not sent")
       reset()
       scrollPageUp()
     }
   };
   return (
-    <>
-      <div className="text-center mb-14">
-        <button className="text-center text-2xl  btn btn-sm dark:btn-outline btn-outline bg-gray-700">
-          Let&lsquo;s connect
-        </button>
-      </div>
-      <section className="contact-section dark:bg-slate-800 bg-gray-200 w-full flex flex-col lg:flex-row items-center justify-evenly">
-        <div className="hidden lg:flex">
-          <img src={gmailGif} alt="Email" />
-        </div>
-        <div className="contact-form flex flex-col justify-center items-center border border-gray-500 p-7 rounded-xl w-fit lg:w-5/12">
-          <form
+    <div className='flex flex-row items-center justify-center'>
+      <form
             onSubmit={handleSubmit(contact)}
-            className="contact flex flex-col gap-5 w-full"
+            className="contact flex flex-col gap-5 w-fit items-center justify-center"
           >
             <div className="flex flex-row gap-1">
               <label className="input input-bordered flex items-center gap-2 w-full">
@@ -87,11 +79,7 @@ const Contact = () => {
                   className="grow"
                   placeholder="Email"
                   {...register("email", {
-                    required: true,
-                    validate: {
-                      matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
-                        "Email address must be a valid address",
-                    }
+                    required: true
                   })}
                 />
               </label>
@@ -113,9 +101,7 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-        </div>
-      </section>
-    </>
+    </div>
   );
 };
 
