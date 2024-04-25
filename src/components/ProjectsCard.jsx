@@ -8,7 +8,7 @@ const ProjectCard = () => {
       description:
         "This is a learning management system project. It is a full stack project built with React, Node.js, Express, and MongoDB. It has features like user authentication, course creation, and enrollment.",
       imageUrl: lms,
-      live: "https://codemon11.netlify.app/",
+      live: "https://www.mohdshoaib.me/",
       githubUrl: "https://github.com/MohdShoaib530/lms-client",
     },
     {
