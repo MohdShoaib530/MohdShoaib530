@@ -50,7 +50,7 @@ const HomeCard = () => {
   return (
     <div className="">
       <div className="flex flex-col items-center  lg:justify-between lg:flex-row w-full ">
-        <div className="flex flex-col justify-center items-center w-fit lg:w-7/12 min-h-[80vh] lg:min-h-[70vh]">
+        <div className="flex flex-col justify-center items-center w-fit lg:w-7/12 min-h-[75vh] lg:min-h-[70vh]">
           <h1 className="lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-semibold">
             Hi There! <br /> I&apos;M Mohammad Shoaib
           </h1>
