@@ -3,7 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { Tooltip } from "react-tooltip";
 import { FaArrowDownLong } from "react-icons/fa6";
 import { useRef } from "react";
-import { SiUpwork } from 'react-icons/si';
+import { SiUpwork } from "react-icons/si";
 
 const HomeCard = () => {
   const socialMedia = [
@@ -48,9 +48,9 @@ const HomeCard = () => {
   };
 
   return (
-    <div className="flex flex-col relative">
-      <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row w-full mt-10 ">
-        <div className="flex flex-col justify-center items-center w-fit lg:w-7/12">
+    <div className="">
+      <div className="flex flex-col items-center  lg:justify-between lg:flex-row w-full ">
+        <div className="flex flex-col justify-center items-center w-fit lg:w-7/12 min-h-[80vh] lg:min-h-[70vh]">
           <h1 className="lg:text-5xl text-3xl md:text-4xl text-gray-950 dark:text-gray-300 font-semibold">
             Hi There! <br /> I&apos;M Mohammad Shoaib
           </h1>
@@ -80,16 +80,16 @@ const HomeCard = () => {
       {/* Add ref to the element you want to scroll to */}
       <div
         ref={latestWorksRef}
-        className="flex flex-col items-center justify-center pt-10 pb-5"
+        className="flex flex-col items-center justify-center"
       >
         <button
-          className="submit-btn btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
+          className="submit-btn btn btn-sm btn-outline dark:text-gray-300 text-gray-950  relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
           onClick={scrollToLatestWorks}
         >
           Latest Works
         </button>
         <FaArrowDownLong
-          className="animate-bounce text-4xl text-gray-950 dark:text-gray-300 pt-3 "
+          className="animate-bounce text-4xl text-gray-950 dark:text-gray-300  mt-3"
           onClick={scrollToLatestWorks}
         />
       </div>

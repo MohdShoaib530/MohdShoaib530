@@ -3,7 +3,7 @@ import { FiMenu } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import useTheme from "../../context/theme.js";
 import { Tooltip } from "react-tooltip";
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { SiUpwork } from "react-icons/si";
 
@@ -127,7 +127,7 @@ function Header() {
           <li key={button.id} className="nav-item ">
             <button
               onClick={() => navigate(button.link)}
-              className="btn btn-sm btn-outline dark:text-gray-300 text-gray-950 0 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
+              className="btn btn-sm btn-outline dark:text-gray-300 text-gray-950 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110 "
             >
               {button.text}
             </button>
@@ -161,10 +161,14 @@ function Header() {
               </button>
             </li>
             <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
-              <Link to="/" onClick={hideDrawer}>Home</Link>
+              <Link to="/" onClick={hideDrawer}>
+                Home
+              </Link>
             </li>
             <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
-              <Link to="/about-me" onClick={hideDrawer}>About Me</Link>
+              <Link to="/about-me" onClick={hideDrawer}>
+                About Me
+              </Link>
             </li>
             {socialMedia.map((social, index) => (
               <li key={index}>

@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 const Home = () => {
   
   return (
-    <div className='relative w-full'>
+    <div className=' w-full'>
       <HomeCard/>
       <ProjectsCard/>
       <Contact/>

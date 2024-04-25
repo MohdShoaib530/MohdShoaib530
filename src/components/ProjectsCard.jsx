@@ -21,7 +21,7 @@ const ProjectCard = () => {
     },
   ];
   return (
-    <div className="flex flex-col lg:flex-row gap-10 lg:gap-1 justify-evenly items-center  w-full dark:bg-slate-800 bg-gray-200 ">
+    <div className="flex flex-col lg:flex-row gap-10 justify-evenly items-center  w-full dark:bg-slate-800 bg-gray-200 mt-10">
       {projects.map((project, index) => (
         <div
           href={project.live}
