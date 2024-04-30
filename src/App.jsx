@@ -30,7 +30,7 @@ function App() {
         <Toaster />
         <Header />
         <Outlet />
-        <Footer />
+        <Footer/>
       </div>
     </ThemeProvider>
   );

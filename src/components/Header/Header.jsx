@@ -64,6 +64,11 @@ function Header() {
       text: "About Me",
       link: "/about-me",
     },
+    {
+      id: 2,
+      text: "Sign in",
+      link: "/login",
+    },
   ];
 
   function changeWidth() {
@@ -83,7 +88,7 @@ function Header() {
       <div className="text-3xl text-gray-950 font-semibold dark:text-gray-300 absolute z-50 lg:left-5 hidden lg:flex">
         MS.
       </div>
-      <div className="absolute right-5 lg:right-1/4">
+      <div className="absolute right-5 lg:right-[30%]">
         <label
           className="swap swap-rotate"
           data-tooltip-id="dark mode"
@@ -122,7 +127,7 @@ function Header() {
           </svg>
         </label>
       </div>
-      <ul className="navbar-nav gap-7 hidden lg:flex absolute right-8">
+      <ul className="navbar-nav gap-7 hidden lg:flex absolute right-5">
         {buttons.map((button) => (
           <li key={button.id} className="nav-item ">
             <button
@@ -168,6 +173,11 @@ function Header() {
             <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
               <Link to="/about-me" onClick={hideDrawer}>
                 About Me
+              </Link>
+            </li>
+            <li className="text-2xl dark:hover:text-gray-400 text-gray-950 dark:text-gray-300 hover:text-gray-500 relative ease-out hover:ease-in transition duration-300 transform hover:scale-110">
+              <Link to="/login" onClick={hideDrawer}>
+                Sign in
               </Link>
             </li>
             {socialMedia.map((social, index) => (
