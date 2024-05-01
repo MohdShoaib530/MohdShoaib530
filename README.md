@@ -8,7 +8,9 @@ A passionate web developer 😊
 - Backend: Node.js, Express
 - Database: MongoDB,MySQL
 - Version Control: Git,Github
-- Other: RESTful APIs, Sass
+- Deployment: Netlify, Vercel, Render
+- Other: RESTful APIs
+- Tools: VS Code, Postman, Cloudinary, Stackblitz, Codesandbox, Appwrite
 
 ## Currently Learning
  Always ready to learn and stay updated with the latest trends in web development.
