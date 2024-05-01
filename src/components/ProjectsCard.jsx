@@ -6,7 +6,7 @@ const ProjectCard = () => {
     {
       title: "Learnign Management System",
       description:
-        "This is a learning management system project. It is a full stack project built with React, Node.js, Express, and MongoDB. It has features like user authentication, course creation, and enrollment.",
+        "This is a learning management system project. It is a full stack project built with React, Node.js, Express, and MongoDB. It has features like user authentication, course creation,payment gateway, course purchasse and enrollment.",
       imageUrl: lms,
       live: "https://www.mohdshoaib.me/",
       githubUrl: "https://github.com/MohdShoaib530/lms-client",
@@ -14,7 +14,7 @@ const ProjectCard = () => {
     {
       title: "Appwrite-React-Blog",
       description:
-        "This is a blog project built with React and Appwrite. It has features like user authentication, blog creation,blog edit,blog delete. It is a full stack project built with React, Appwrite, and Tailwind CSS.",
+        "This is a blog project built with React and Appwrite(backend as a service). It has features like user authentication, blog creation,blog edit,blog delete. It is a full stack project built with React, Appwrite, and Tailwind CSS.",
       imageUrl: blog,
       live: "https://appwrite-react-blog.netlify.app/",
       githubUrl: "https://github.com/MohdShoaib530/appwrite-react-blog",

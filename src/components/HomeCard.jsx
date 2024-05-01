@@ -3,7 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { Tooltip } from "react-tooltip";
 import { FaArrowDownLong } from "react-icons/fa6";
 import { useRef } from "react";
-import { SiUpwork } from "react-icons/si";
+import { FaUpwork  } from "react-icons/fa6";
 
 const HomeCard = () => {
   const socialMedia = [
@@ -19,7 +19,7 @@ const HomeCard = () => {
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/mohd.shoaib_123/",
+      url: "https://www.instagram.com/mohd.shoaib_91/",
       icon: <FaInstagram />,
     },
     {
@@ -29,13 +29,13 @@ const HomeCard = () => {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/MohdShoaib530",
+      url: "https://twitter.com/MohdShoaib915",
       icon: <FaTwitter />,
     },
     {
       name: "Upwork",
       url: "https://www.upwork.com/freelancers/~0102a4f512110275d7",
-      icon: <SiUpwork />,
+      icon: <FaUpwork />,
     },
   ];
 
