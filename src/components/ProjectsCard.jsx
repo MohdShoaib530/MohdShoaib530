@@ -1,5 +1,5 @@
-import lms from "../Assets/Screenshot 2024-04-22 193719.png";
-import blog from "../Assets/Screenshot 2024-04-22 193808.png";
+import lms from "../Assets/Screenshot 2024-05-01 173745.png";
+import blog from "../Assets/Screenshot 2024-05-04 083154.png";
 
 const ProjectCard = () => {
   const projects = [
