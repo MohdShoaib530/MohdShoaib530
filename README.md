@@ -1,31 +1,11 @@
-# Hi there, I'm Mohd Shoaib! 👋
+## Sidefolio - Portfolio website template
 
-A passionate web developer 😊
+As seen on [Aceternity UI](https://ui.aceternity.com/templtes/sidefolio)
 
-## 🔧 Technologies & Tools
+## Built with
+- Next.js
+- Tailwindcss
+- Framer motion
+- MDX
 
-- Frontend: HTML, CSS, JavaScript, React, Tailwind css
-- Backend: Node.js, Express
-- Database: MongoDB,MySQL
-- Version Control: Git,Github
-- Deployment: Netlify, Vercel, Render
-- Other: RESTful APIs
-- Tools: VS Code, Postman, Cloudinary, Stackblitz, Codesandbox, Appwrite
-
-## Currently Learning
- Always ready to learn and stay updated with the latest trends in web development.
-
-##  Collaboration
-
-I'm open to collaboration on projects related to web development. If you have exciting ideas or ongoing projects and need an extra pair of hands, feel free to reach out.
-
-## 📫 How to Reach Me
-
-You can connect with me through:
-
-- GitHub: [@MohdShoaib530](https://github.com/MohdShoaib530)
-- LinkedIn: [Mohd Shoaib](https://www.linkedin.com/in/mohd-shoaib530/)
-
-Feel free to drop a message if you want to discuss anything related to web development, technology, or if you just want to say hello!
-
-Happy coding! 🚀
+Checkout all the templates at [Aceternity UI](https://ui.aceternity.com/templates)
