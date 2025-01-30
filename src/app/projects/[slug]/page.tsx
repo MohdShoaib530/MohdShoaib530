@@ -5,13 +5,10 @@ import { Product } from "@/types/products";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
-interface PageProps {
-  params: { slug: string };
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   // Properly await dynamic params
-  const { slug } = await params;
+  const slug = params.slug
   const product = products.find((p) => p.slug === slug);
 
   return {
@@ -20,9 +17,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function SingleProjectPage({ params }: PageProps) {
+export default async function SingleProjectPage(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   // Await the params destructing
-  const { slug } = await params;
+  const  slug  =  params.slug;
   const product = products.find((p) => p.slug === slug);
 
   if (!product) {
