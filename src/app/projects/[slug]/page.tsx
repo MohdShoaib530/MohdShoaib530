@@ -15,7 +15,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   const product = products.find((p) => p.slug === slug) as Product | undefined;
   if (product) {
     return {
