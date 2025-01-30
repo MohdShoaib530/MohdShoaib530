@@ -56,7 +56,7 @@ export const Contact = () => {
 };
 
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className='form  items-center justify-center' onSubmit={handleSubmit}>
       <div className='flex flex-col md:flex-row justify-between gap-5'>
         <input
           type='text'

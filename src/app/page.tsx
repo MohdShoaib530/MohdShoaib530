@@ -22,11 +22,11 @@ export default function Home() {
     },
     {
       text: 'Mohd',
-     className: 'text-gray-600 lg:text-4xl text-xl md: text-2xl'
+     className: 'text-blue-500 lg:text-4xl text-xl md: text-2xl'
     },
     {
       text: 'Shoaib',
-   className: 'text-gray-600 lg:text-4xl text-xl md: text-2xl'
+   className: 'text-blue-500 lg:text-4xl text-xl md: text-2xl'
     }
   ];
   return (

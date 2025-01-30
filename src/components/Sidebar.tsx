@@ -4,21 +4,34 @@ import { Navlink } from "@/types/navlink";
 import Image from "next/image";
 import Link from "next/link";
 import {  usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Heading } from "./Heading";
 import { socials } from "@/constants/socials";
 import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
-import { isMobile } from "@/lib/utils";
 import msd from '../../public/images/msd.jpeg';
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 
+const checkMobile = () => {
+  if(window.innerWidth <= 1024){
+    return true
+  }
+};
 export const Sidebar = () => {
-  const [open, setOpen] = useState(isMobile() ? false : true);
-
+  const [open, setOpen] = useState(true);
+  
+  useEffect(() => {
+    
+    const mobile = checkMobile();
+    if(mobile){
+      setOpen(false)
+    }
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
     <>
       <AnimatePresence>
@@ -33,10 +46,10 @@ export const Sidebar = () => {
             <div className="flex-1 overflow-auto">
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
-            </div>
-            <div onClick={() => isMobile() && setOpen(false)}>
+            <div onClick={() => checkMobile() && setOpen(false)} className="">
             <Badge href="https://hire.chaicode.com/mohdshoaib91530/afraid-comparable-albatross" text="Read Resume"  />
             
+            </div>
             </div>
           </motion.div>
         )}
@@ -66,7 +79,7 @@ export const Navigation = ({
         <Link
           key={link.href}
           href={link.href}
-          onClick={() => isMobile() && setOpen(false)}
+          onClick={() => checkMobile() && setOpen(false)}
           className={twMerge(
             "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
             isActive(link.href) && "bg-white shadow-lg text-primary"
@@ -87,6 +100,7 @@ export const Navigation = ({
       </Heading>
       {socials.map((link: Navlink) => (
         <Link
+        target="_blank"
           key={link.href}
           href={link.href}
           className={twMerge(
