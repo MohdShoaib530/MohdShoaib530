@@ -21,7 +21,7 @@ export default function Home() {
       className: 'text-gray-600 lg:text-4xl text-xl md: text-2xl'
     },
     {
-      text: 'Mohd',
+      text: 'Md',
      className: 'text-blue-500 lg:text-4xl text-xl md: text-2xl'
     },
     {
