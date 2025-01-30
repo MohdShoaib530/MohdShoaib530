@@ -5,9 +5,9 @@ import { Paragraph } from "@/components/Paragraph";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | John Doe",
+  title: "Contact | Mohd Shoaib",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Mohd Shoaib is a full stack web developer.",
 };
 
 export default function Projects() {
