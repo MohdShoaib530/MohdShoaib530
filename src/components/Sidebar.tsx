@@ -47,7 +47,7 @@ export const Sidebar = () => {
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
             <div onClick={() => checkMobile() && setOpen(false)} className="">
-            <Badge href="https://hire.chaicode.com/mohdshoaib91530/afraid-comparable-albatross" text="Read Resume"  />
+            <Badge href="https://hire.chaicode.com/mohdshoaib91530/mohd-shoaib" text="Read Resume"  />
             
             </div>
             </div>
