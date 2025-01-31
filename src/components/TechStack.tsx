@@ -119,7 +119,7 @@ export const TechStack = () => {
   return (
     <div className='mt-10 mb-10'>
       <div className=' mb-10 relative flex h-8 w-fit flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl px-1'>
-        <span className='text-lg text-gray-500 '>Tech Stack</span>
+        <span className='text-lg text-gray-500 '>Tech</span>
         <BorderBeam size={50} duration={12} delay={9} />
       </div>
       <div className='w-full flex flex-row flex-wrap gap-3 text-gray-400 items-center justify-center'>

@@ -55,7 +55,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0 flex-wrap gap-1">
           {product.stack?.map((stack: string) => (
             <span
               key={stack}
