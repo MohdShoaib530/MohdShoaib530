@@ -2,6 +2,8 @@ import todo1 from "../../public/images/todo1.png";
 import todo2 from "../../public/images/todoapp2.png";
 import skillsmaster1 from "../../public/images/skillsmaster1.png";
 import skillsmaster2 from "../../public/images/skillsmaster2.png";
+import stack1 from "../../public/images/stack1.png";
+import stack2 from "../../public/images/stack2.png";
 
 export const products = [
   {
@@ -44,5 +46,26 @@ export const products = [
         </p>{" "}
       </div>
     ),
-  }
+  },
+  {
+    href: "https://stackoverflow-appwrite-navy.vercel.app/",
+    title: "stackoverflow-appwrite",
+    description:
+      "stackoverflow-appwrite is a full-stack project built with Nextjs and Appwrite (backend as a service).",
+    thumbnail: stack1,
+    images: [stack1, stack2],
+    stack: ["NextJS", "Tailwindcss", "Appwrite","Zustand", "Cloudinary"],
+    slug: "stackoverflow-appwrite",
+    content: (
+      <div>
+        <p>
+          Stackoverflow-appwrite is a full-stack project built with Next.js and Appwrite (backend as a service).
+        </p>
+        <p>
+          The project includes features such as user authentication, question creation, editing, and deletion, vote up and down, comment on questions, and search questions by tags.
+        </p>{" "}
+      </div>
+    ),
+  },
+
 ];

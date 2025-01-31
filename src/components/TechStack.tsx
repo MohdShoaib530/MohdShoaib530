@@ -18,7 +18,8 @@ import {
   SiMongodb,
   SiNetlify,
   SiRender,
-  SiMysql
+  SiMysql,
+  SiPrisma
 } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
 import { IoGitCompareOutline } from 'react-icons/io5';
@@ -44,11 +45,15 @@ export const TechStack = () => {
     },
     {
       name: 'Next.js',
-      icon: <RiNextjsLine className='text-black' />
+      icon: <RiNextjsLine className='text-gray-400' />
     },
     {
       name: 'Redux',
       icon: <SiRedux className='text-purple-500' />
+    },
+    {
+      name: 'Prisma',
+      icon: <SiPrisma className='text-blue-500' />
     },
     {
       name: 'Node.js',
@@ -56,7 +61,7 @@ export const TechStack = () => {
     },
     {
       name: 'Express.js',
-      icon: <SiExpress className='text-gray-500' />
+      icon: <SiExpress className='text-gray-400' />
     },
     {
       name: 'MongoDB',
@@ -68,15 +73,15 @@ export const TechStack = () => {
     },
     {
       name: 'Vercel',
-      icon: <SiVercel className='text-black' />
+      icon: <SiVercel className='text-gray-400' />
     },
     {
       name: 'Netlify',
-      icon: <SiNetlify className='text-black' />
+      icon: <SiNetlify className='text-green-500' />
     },
     {
       name: 'Render',
-      icon: <SiRender className='text-black' />
+      icon: <SiRender className='text-gray-400' />
     },
     {
       name: 'VS Code',
@@ -84,11 +89,11 @@ export const TechStack = () => {
     },
     {
       name: 'Git',
-      icon: <IoGitCompareOutline className='text-black' />
+      icon: <IoGitCompareOutline className='text-red-400' />
     },
     {
       name: 'GitHub',
-      icon: <FaGithub className='text-black' />
+      icon: <FaGithub className='text-gray-400' />
     },
     {
       name: 'Postman',
@@ -100,15 +105,15 @@ export const TechStack = () => {
     },
     {
       name: 'Stackblitz',
-      icon: <SiStackblitz className='text-black' />
+      icon: <SiStackblitz className='text-blue-400' />
     },
     {
       name: 'Codesandbox',
-      icon: <SiCodesandbox className='text-black' />
+      icon: <SiCodesandbox className='text-gray-400' />
     },
     {
       name: 'Appwrite',
-      icon: <SiAppwrite className='text-black' />
+      icon: <SiAppwrite className='text-red-400' />
     }
   ];
   return (
@@ -117,11 +122,11 @@ export const TechStack = () => {
         <span className='text-lg text-gray-500 '>Tech Stack</span>
         <BorderBeam size={50} duration={12} delay={9} />
       </div>
-      <div className='w-full flex flex-row flex-wrap gap-3 text-gray-500'>
+      <div className='w-full flex flex-row flex-wrap gap-3 text-gray-400 items-center justify-center'>
         {personalSkillset.map((skill, index) => (
           <div
             key={index}
-            className='skill-icon flex flex-col items-center gap-1'
+            className='skill-icon flex flex-col items-center gap-1 justify-between'
           >
             <ul className='skill-icon text-7xl'>{skill.icon}</ul>
             <h1>{skill.name}</h1>
